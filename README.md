@@ -6,7 +6,7 @@ Based on the [Local Add-on Generator](https://github.com/getflywheel/create-loca
 
 ## Requirements
 
-The addon assumes the [Visual Studio Code CLI](https://code.visualstudio.com/docs/editor/command-line) being installed on the maschine.
+The addon assumes the [Visual Studio Code CLI](https://code.visualstudio.com/docs/editor/command-line) being installed on the machine.
 This works on macOS.
 
 **Not yet tested on Windows or Linux.**
