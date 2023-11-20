@@ -2,12 +2,14 @@
 
 ## Getting started
 
-Based on the [Local Add-on Generator](https://github.com/getflywheel/create-local-addon) Boilerplace.
+Based on the [Local Add-on Generator](https://github.com/getflywheel/create-local-addon) boilerplate.
 
 ## Requirements
 
 The addon assumes the [Visual Studio Code CLI](https://code.visualstudio.com/docs/editor/command-line) being installed on the maschine.
-This works on macOS. **Not yet tested on Windows or Linux.**
+This works on macOS.
+
+**Not yet tested on Windows or Linux.**
 
 
 ## Installation
