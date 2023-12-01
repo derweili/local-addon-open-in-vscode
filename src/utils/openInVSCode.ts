@@ -24,6 +24,11 @@ const openInVsCodeOnMac = (path: string) => {
 	});
 };
 
+// Open in linux, for now just proxy the mac function
+const openInVsCodeOnLinux = (path: string) => {
+	openInVsCodeOnMac(path);
+};
+
 const openInVSCode = (path: string) => {
 	const platform = os.platform();
 
@@ -31,7 +36,14 @@ const openInVSCode = (path: string) => {
 		case 'darwin':
 			openInVsCodeOnMac(path);
 			break;
+		// handle all linux distros
+		case 'linux':
+		case 'freebsd':
+		case 'openbsd':
+			openInVsCodeOnLinux(path);
+
 		default:
+			openInVsCodeOnMac(path);
 			global.alert('Sorry, this feature is not yet available for your platform.');
 			break;
 	}

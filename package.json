@@ -2,7 +2,7 @@
   "name": "local-open-in-vscode",
   "productName": "OpenInVSCode",
   "version": "1.0.0",
-  "author": "Local Team",
+  "author": "derweili",
   "keywords": [
     "local-addon"
   ],
@@ -14,10 +14,10 @@
   "main": "lib/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/getflywheel/local-addon-boilerplate"
+    "url": "https://github.com/derweili/local-addon-open-in-vscode"
   },
   "bugs": {
-    "url": "https://github.com/getflywheel/local-addon-boilerplate/issues"
+    "url": "https://github.com/derweili/local-addon-open-in-vscode/issues"
   },
   "license": "MIT",
   "scripts": {
