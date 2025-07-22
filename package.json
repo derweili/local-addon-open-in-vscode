@@ -1,6 +1,6 @@
 {
-  "name": "local-open-in-vscode",
-  "productName": "OpenInVSCode",
+  "name": "local-open-in-cursor",
+  "productName": "OpenInVSCursor",
   "version": "1.0.0",
   "author": "derweili",
   "keywords": [
@@ -8,16 +8,16 @@
   ],
   "bgColor": "#51bb7b",
   "icon": "icon.svg",
-  "slug": "openinvscode",
+  "slug": "openincursor",
   "description": "A quick start to your amazing addon!",
   "renderer": "lib/renderer.js",
   "main": "lib/main.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/derweili/local-addon-open-in-vscode"
+    "url": "https://github.com/derweili/local-addon-open-in-cursor"
   },
   "bugs": {
-    "url": "https://github.com/derweili/local-addon-open-in-vscode/issues"
+    "url": "https://github.com/derweili/local-addon-open-in-cursor/issues"
   },
   "license": "MIT",
   "scripts": {

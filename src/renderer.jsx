@@ -1,7 +1,7 @@
 import SettingsPage from './SettingsPage';
 import fs from 'fs-extra';
 import path from 'path';
-import OpenInVsCodeButton from './OpenInVsCodeButton';
+import OpenInCursorButton from './OpenInCursorButton';
 
 const packageJSON = fs.readJsonSync(path.join(__dirname, '../package.json'));
 const addonID = packageJSON.slug;
@@ -19,7 +19,7 @@ export default function (context) {
 	hooks.addFilter('siteInfoToolsItem', (menu) => [
 		...menu,
 		{
-			menuItem: 'Open in VSCode',
+			menuItem: 'Open in Cursor',
 			path: `/${addonID}`,
 			render: (props) => <SettingsPage {...props} />,
 		},
@@ -28,5 +28,5 @@ export default function (context) {
 	/**
 	 * Add button to top right of site info page
 	 */
-	hooks.addContent('SiteInfo_Top_TopRight', (site) => <OpenInVsCodeButton site={site} />);
+	hooks.addContent('SiteInfo_Top_TopRight', (site) => <OpenInCursorButton site={site} />);
 }
