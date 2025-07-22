@@ -1,4 +1,4 @@
-# Local Add-on to open project in Visual Studio Code
+# Local Add-on to open project in Cursor
 
 ## Getting started
 

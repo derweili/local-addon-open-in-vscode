@@ -1,14 +1,15 @@
 import { exec } from 'child_process';
 import os from 'os';
 
-const openInVsCodeOnMac = (path: string) => {
+const openInCursorOnMac = (_path: string) => {
+	const path = _path.trim();
 	const isWorkspaceFile = path.endsWith('.code-workspace');
 
 	// Escape spaces in path
 	const pathEscaped = path.replace(/ /g, '\\ ');
 
 	if (isWorkspaceFile) {
-		exec(`code ${pathEscaped}`, (err) => {
+		exec(`cursor ${pathEscaped}`, (err) => {
 			if (err) {
 				global.console.error(err);
 			}
@@ -17,7 +18,7 @@ const openInVsCodeOnMac = (path: string) => {
 	}
 
 	// Open folder
-	exec(`cd ${pathEscaped} && code .`, (err) => {
+	exec(`cd ${pathEscaped} && cursor .`, (err) => {
 		if (err) {
 			global.console.error(err);
 		}
@@ -25,28 +26,28 @@ const openInVsCodeOnMac = (path: string) => {
 };
 
 // Open in linux, for now just proxy the mac function
-const openInVsCodeOnLinux = (path: string) => {
-	openInVsCodeOnMac(path);
+const openInCursorOnLinux = (path: string) => {
+	openInCursorOnMac(path);
 };
 
-const openInVSCode = (path: string) => {
+const openInCursor = (path: string) => {
 	const platform = os.platform();
 
 	switch (platform) {
 		case 'darwin':
-			openInVsCodeOnMac(path);
+			openInCursorOnMac(path);
 			break;
 		// handle all linux distros
 		case 'linux':
 		case 'freebsd':
 		case 'openbsd':
-			openInVsCodeOnLinux(path);
+			openInCursorOnLinux(path);
 
 		default:
-			openInVsCodeOnMac(path);
+			openInCursorOnMac(path);
 			global.alert('Sorry, this feature is not yet available for your platform.');
 			break;
 	}
 };
 
-export default openInVSCode;
+export default openInCursor;

@@ -20,13 +20,13 @@ export default function (context: LocalMain.AddonMainContext): void {
 	});
 	logger.log('fileSystem', context.fileSystem);
 
-	ipcMain.on('save-vscode-location', async (event, siteId, location) => {
-		LocalMain.sendIPCEvent('vscode-location-saved');
-		global.console.log('save-vscode-location', siteId, location);
-		logger.log('info', `Saving vscode location ${location} for site ${siteId}.`);
+	ipcMain.on('save-cursor-location', async (event, siteId, location) => {
+		LocalMain.sendIPCEvent('cursor-location-saved');
+		global.console.log('save-cursor-location', siteId, location);
+		logger.log('info', `Saving cursor location ${location} for site ${siteId}.`);
 		siteData.updateSite(siteId, {
 			id: siteId,
-			openVsCode: {
+			openCursor: {
 				location,
 			},
 		} as Partial<Local.SiteJSON>);
